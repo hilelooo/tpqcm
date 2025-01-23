@@ -1,7 +1,7 @@
 import random
 
 
-def game(max, lives = 10):
+def game(max=100, lives = 10):
   number = random.randint(1,max)
   while lives > 0:
     guess = int(input("Choix"))
@@ -15,4 +15,9 @@ def game(max, lives = 10):
   if lives == 0:
     print("t nul")
 
-max = int(input("Nombre max"))
+max = input("Nombre max (défaut : 100)")
+max = None if max == '' else int(max)
+lives = input("Nombre de vies (défaut : 10)")
+lives = None if lives == '' else int(lives)
+
+game(max,lives)
