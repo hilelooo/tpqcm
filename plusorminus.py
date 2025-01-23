@@ -4,7 +4,7 @@ import random
 def game(max, lives):
   number = random.randint(1,max)
   while lives > 0:
-    guess = int(input("Choix"))
+    guess = int(input("Choix : "))
     if guess > number:
       print("Moins")
     elif guess < number:
@@ -12,6 +12,8 @@ def game(max, lives):
     elif guess == number:
       print("ouais c'est ca")
       break
+    lives -= 1
+    print(f"Il vous reste {lives} vies")
   if lives == 0:
     print("t nul")
 
