@@ -14,3 +14,5 @@ def game(max, lives = 10):
       break
   if lives == 0:
     print("t nul")
+
+max = int(input("Nombre max"))
