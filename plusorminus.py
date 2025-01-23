@@ -5,13 +5,13 @@ def clear():
     try:
         os.system('cls' if os.name == 'nt' else 'clear')
         return "ok"
-    except:
-        return "nok"
+    except SystemExit as e:
+        raise e
 clear()
 
 
 def game(max, lives):
-  number = int(random.random()*100)
+  number = int(random.random()*max)
   while lives > 0:
     guess = int(input("Choix : "))
     clear()
