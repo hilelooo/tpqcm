@@ -11,7 +11,7 @@ clear()
 
 
 def game(max, lives):
-  number = random.randint(1,max)
+  number = int(random.random()*100)
   while lives > 0:
     guess = int(input("Choix : "))
     clear()
