@@ -7,9 +7,9 @@ def game(max=100, lives = 10):
     guess = int(input("Choix"))
     if guess > number:
       print("Moins")
-    else if guess < number:
+    elif guess < number:
       print("Plus")
-    else if guess == number:
+    elif guess == number:
       print("ouais c'est ca")
       break
   if lives == 0:
