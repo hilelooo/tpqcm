@@ -7,7 +7,7 @@ def clear():
         return "ok"
     except SystemExit as e:
         raise e
-clear()
+
 
 
 def game(max, lives):
@@ -27,9 +27,12 @@ def game(max, lives):
   if lives == 0:
     print("t nul")
 
-max = input("Nombre max (défaut : 100)")
-max = 100 if max == '' else int(max)
-lives = input("Nombre de vies (défaut : 10)")
-lives = 10 if lives == '' else int(lives)
 
-game(max,lives)
+if __name__ == "__main__":
+    clear()
+    max = input("Nombre max (défaut : 100)")
+    max = 100 if max == '' else int(max)
+    lives = input("Nombre de vies (défaut : 10)")
+    lives = 10 if lives == '' else int(lives)
+    
+    game(max,lives)
